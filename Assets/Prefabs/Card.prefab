@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7127312208944225089}
   - component: {fileID: 8947633623952544910}
   - component: {fileID: 8082844202483674221}
+  - component: {fileID: -3027080179276824816}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -107,3 +108,15 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: -1, y: 1}
   m_UseGraphicAlpha: 1
+--- !u!114 &-3027080179276824816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649473792536499077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 862bbaf15be934789b5c7d760ab97440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
