@@ -48,10 +48,7 @@ namespace Solitaire.Game
 
         public void OnDrop(PointerEventData eventData)
         {
-            if (eventData.pointerDrag != null && eventData.pointerDrag != gameObject && eventData.pointerDrag.TryGetComponent<Card>(out var droppedCard))
-            {
-                CommandManager.Instance.ExecuteCommand(new MoveCardCommand(droppedCard, droppedCard.CurrentStack, CurrentStack));
-            }
+            // Removed command execution to prevent double execution
         }
 
         /// <summary>
