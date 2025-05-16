@@ -8,12 +8,10 @@ namespace Solitaire.Game
         [SerializeField] private CardStack[] _stacks;
         [SerializeField] private int _cardsPerStack = 5;
         [SerializeField] private Card _cardPrefab;
-        [SerializeField] private Button _undoButton;
 
         private void Start()
         {
             InitializeGame();
-            _undoButton.onClick.AddListener(Undo);
         }
 
         private void InitializeGame()
@@ -27,11 +25,6 @@ namespace Solitaire.Game
                     stack.AddCard(card);
                 }
             }
-        }
-
-        private void Undo()
-        {
-            CommandManager.Instance.Undo();
         }
     }
 } 

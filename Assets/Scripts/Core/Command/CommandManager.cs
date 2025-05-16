@@ -17,6 +17,8 @@ namespace Solitaire.Core.Command
 
         private readonly Stack<ICommand> _undoStack = new Stack<ICommand>();
         
+        public event Action<bool> OnUndoStateChanged;
+        
         public void ExecuteCommand(ICommand command)
         {
             if (command == null)
@@ -26,6 +28,7 @@ namespace Solitaire.Core.Command
 
             command.Execute();
             _undoStack.Push(command);
+            OnUndoStateChanged?.Invoke(true);
         }
 
         public void Undo()
@@ -34,14 +37,10 @@ namespace Solitaire.Core.Command
             {
                 var command = _undoStack.Pop();
                 command.Undo();
+                OnUndoStateChanged?.Invoke(CanUndo);
             }
         }
 
         public bool CanUndo => _undoStack.Count > 0;
-
-        public static void Reset()
-        {
-            _instance = null;
-        }
     }
 } 

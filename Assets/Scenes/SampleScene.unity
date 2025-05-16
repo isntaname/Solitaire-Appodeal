@@ -378,7 +378,6 @@ MonoBehaviour:
   - {fileID: 337333016}
   _cardsPerStack: 5
   _cardPrefab: {fileID: -3027080179276824816, guid: 5a82f89ba5b044615a0ad210979d1e21, type: 3}
-  _undoButton: {fileID: 1458007040}
 --- !u!1001 &337333014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -671,6 +670,7 @@ GameObject:
   - component: {fileID: 1458007042}
   - component: {fileID: 1458007041}
   - component: {fileID: 1458007040}
+  - component: {fileID: 1458007044}
   m_Layer: 5
   m_Name: UndoButton
   m_TagString: Untagged
@@ -779,6 +779,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 149}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1458007044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458007039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6844427e7216b408cafe6d59309d9f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1628103588
 PrefabInstance:
   m_ObjectHideFlags: 0
