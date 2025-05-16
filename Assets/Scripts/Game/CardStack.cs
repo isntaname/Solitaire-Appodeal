@@ -14,6 +14,8 @@ namespace Solitaire.Game
             _layoutGroup = GetComponent<LayoutGroup>();
         }
 
+        public IReadOnlyList<Card> GetCards() => _cards;
+
         public void AddCard(Card card)
         {
             if (!_cards.Contains(card))

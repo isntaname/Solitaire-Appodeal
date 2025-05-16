@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Solitaire.Core.Command;
 using Solitaire.Game.Commands;
+using System.Linq;
 
 namespace Solitaire.Game
 {
@@ -22,6 +23,13 @@ namespace Solitaire.Game
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            // Only allow dragging if this is the last card in the stack
+            if (CurrentStack != null && !IsLastCardInStack())
+            {
+                eventData.pointerDrag = null;
+                return;
+            }
+
             _originalStack = CurrentStack;
             if (_graphic != null) _graphic.raycastTarget = false;
             transform.SetParent(transform.root);
@@ -32,6 +40,13 @@ namespace Solitaire.Game
                 out _dragOffset
             );
             transform.SetAsLastSibling();
+        }
+
+        private bool IsLastCardInStack()
+        {
+            if (CurrentStack == null) return true;
+            var cards = CurrentStack.GetCards();
+            return cards.Count > 0 && cards.Last() == this;
         }
 
         public void OnDrag(PointerEventData eventData)
