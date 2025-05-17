@@ -33,7 +33,7 @@ This project was primarily AI-assisted using **Cursor**. AI helped in designing,
 - **Core Game Logic:** Basic card movement mechanics, drag-and-drop interactions, and stack behavior.
 - **Card Movement Restrictions:** Ensured only the top card in a stack can be moved.
 - **Undo Improvements:** Undo button updates using event-driven logic.
-– **Proofreading of this README**
+- **Proofreading of this README**
 
 ### Example Init Prompts Used
 
